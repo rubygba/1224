@@ -1,0 +1,186 @@
+$lightBlue = #42beec
+
+// html {
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden
+// }
+
+body
+  width: 100%;
+  height: 100%;
+  background-color: #f7fbfc
+  overflow: hidden
+  background: url('~assets/bg.jpg') no-repeat center;
+  background-size: 100% auto;
+  counter-reset: prz;
+  >a
+    display: none
+
+button.btn-blue
+  background-color: #42beec
+  color: #fff
+  border: 1px solid #42beec
+  outline: none
+  // &:hover
+  //   background-color: #fff
+  //   color: #42beec
+  &.active
+    background-color: #fff
+    color: #42beec
+
+@keyframes wave {
+  from {
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(-360deg)
+  }
+}
+
+.alertbg {
+  position: absolute
+  top: 20px
+  left: 0
+  right: 0
+  z-index: -1
+  img {
+    width: 100%
+    animation: rotate 15s linear infinite
+  }
+}
+
+.btn {
+  background: url('~assets/btn1.png') no-repeat center;
+  background-size: contain
+  width: 202px
+  height: 75px
+  overflow: hidden
+  text-indent: -999px
+  display: inline-block
+  margin-top: 5px
+}
+.btn2 {
+  background-image: url('~assets/btn2.png')
+  margin-top: 0
+}
+.btn3 {
+  background-image: url('~assets/btn3.png')
+  margin-top: 15px
+}
+
+.alert4 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7)
+  z-index: 1024
+  padding-top: 110px
+  .alert4-container {
+    padding: 124px 28px
+    width: 330px;
+    height: 357px;
+    margin: 0 auto;
+    background: url('~assets/alert4.png') no-repeat top center;
+    background-size: cover;
+    // text-align: center
+    color: #fff
+    p {
+      font-size: 14px
+      line-height: 1.5
+      color: #fff
+      margin-bottom: 5px
+    }
+  }
+  .alertclose {
+    position: absolute
+    right: 36px
+    top: 212px
+    width: 40px
+    height: 40px
+    background: url('~assets/close.png') no-repeat top right
+    background-size: 22px
+  }
+}
+
+.mc-top {
+  margin-top: 26px
+  .mc-top-avatar {
+    height: 100px
+    position: relative
+    text-align: center
+    // background: url('~assets/mc-t2.png') no-repeat center
+    // background-size: 86px
+    img {
+      width: 86px
+      display: inline-block
+      position: relative
+      left: 10px
+    }
+    img.avatar {
+      width: 66px
+      position: absolute
+      top: 28px
+      z-index: -1
+      display: inline-block
+      left: 50%
+      margin-left: -33px
+    }
+  }
+  .mc-top-name {
+    color: #fff
+    font-size: 16px
+  }
+  .mc-top-txt {
+    font-size: 21px
+    line-height: 2
+    color: #fff
+    font-weight: bold
+  }
+  .mc-top-tip {
+    img {
+      width: 176px
+    }
+  }
+  .mc-top-rule {
+    position: absolute
+    right: 15px
+    top: 90px
+    img {
+      width: 58px
+    }
+  }
+}
+
+.mc-bottom {
+  // position: fixed
+  // left: 0
+  // right: 0
+  // bottom: 0
+  img {
+    display: block
+    width: 100%
+    position: relative
+    // top: -215px
+  }
+}
