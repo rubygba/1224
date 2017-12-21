@@ -1,1 +1,0 @@
-webpackJsonp([4],{3:function(n,e){},38:function(n,e){},62:function(n,e,t){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var o=t(0),u=t(2),c=t.n(u),a=t(3),d=(t.n(a),t(38));t.n(d);c.a.attach(document.body,{}),new o.a({el:"#app",data:function(){return{isRule:!1}},computed:{},created:function(){},mounted:function(){},methods:{}})}},[62]);
