@@ -14,7 +14,7 @@
       <div class="float-right">圣诞收徒收益：XX元</div>
     </div>
     <div class="b2-rule">
-      <div class="b2-rule-title">活动规则</div>
+      <div class="b2-rule-title txt-center"><i></i>——   活动规则   ——<i></i></div>
       <div class="b2-rule-content">
         <h5>活动时间：</h5>
         <p>2017年12月23日09：00-12月27日24：00</p>

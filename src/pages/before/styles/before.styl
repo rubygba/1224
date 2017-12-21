@@ -15,8 +15,18 @@ body
   >a
     display: none
 
-@keyframes shock {
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0) rotate(0)
+  }
 
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-3px, 0, 0) rotate(-7deg)
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(3px, 0, 0) rotate(7deg)
+  }
 }
 
 .before-1 {
@@ -28,6 +38,7 @@ body
   padding-top: 12px
   padding-right: 6px
   img {
+    animation: shake 1.5s linear infinite
     width: 68px
   }
 }
@@ -59,6 +70,15 @@ body
     background-color: #fff
   }
 }
+.b2-rule {
+  position: relative
+}
+.b2-rule-title {
+  font-size: 24px
+  font-weight: bold
+  color: #037aab
+  padding: 13px 0
+}
 .b2-rule-content {
   border-radius: 9px
   padding: 10px 10px
@@ -85,7 +105,7 @@ body
 }
 
 .before-4 {
-  height: 500px
+  height: 520px
   background: url('~assets/before4.jpg') no-repeat top center
   background-size: cover
 }
