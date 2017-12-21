@@ -4,9 +4,8 @@
     <div class="alertbg">
       <img src="~assets/alertbg.png" alt="">
     </div>
-    <div class="alertclose" @click="isRule = false">
-    </div>
     <div class="alert4-container">
+      <div class="alertclose" @click="isRule = false"></div>
       <p>1.活动仅限东方头条新用户参加，每位用户仅有1次参加机会。</p>
       <p>2.新人完成活动新人完成任务可获得现金奖励，完成分享被阅读任务奖励无上限，还有更多的活动奖励等你来拿哦。</p>
       <p>3.获得的现金可在“我的”-“钱包”内进行查看和体现。</p>

@@ -33,7 +33,7 @@
       <h2>恭喜你</h2>
       <h3>获得20个圣诞老人派发的礼物，</h3>
       <h3>快去打开吧</h3>
-      <a href="last.html" class="btn btn2">立即开启</a>
+      <a href="last.html" @click.prevent="openPrz" class="btn btn2">立即开启</a>
     </div>
   </div>
   <div class="alert2 alert3" v-if="page === 3">
@@ -128,7 +128,8 @@ export default {
       gravity: .05,
       floor: 1000,
       count: 6,
-      clickPrz: 0
+      clickPrz: 0,
+      loading: false
     }
   },
   computed: {
@@ -204,12 +205,22 @@ export default {
       }, 1000)
     },
     goPage(n) {
+      this.loading = true
       this.page = n
       if (this.page === 2) {
         if (this.clickPrz < 1) {
           this.page = 3
         }
       }
+      setTimeout(() => {
+        this.loading = false
+      }, 500)
+    },
+    openPrz() {
+      if (this.loading) {
+        return
+      }
+      window.location.href = 'last.html'
     },
     // 个位数双位显示
     pad2: function(n) {

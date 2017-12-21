@@ -1,7 +1,7 @@
 <template>
 <div class="before">
   <div class="before-1">
-    <div class="b1-gift txt-right">
+    <div class="b1-gift txt-right" v-show="isChristmas">
       <img src="~assets/before_float.png" alt="">
     </div>
   </div>
@@ -57,12 +57,18 @@ export default {
       floor: 1000,
       count: 6,
       clickPrz: 0,
-      isRule: false
+      isRule: false,
+      isChristmas: false
     }
   },
   computed: {
   },
   created: function() {
+    let nowDay = this.generateBeforeDate().substring(0, 8)
+    if (nowDay === '20171224' || nowDay === '20171225') {
+      this.isChristmas = true
+    }
+    console.log(nowDay)
   },
   mounted: function() {
   },
