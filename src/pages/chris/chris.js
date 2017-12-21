@@ -51,7 +51,7 @@ class Present {
       this.vy += gravity * this.mass
       this.ypos += this.vy
       if (this.ypos < floor) {
-        // this.setVisible(1)
+        this.setVisible(1)
         this.setPosition(this.xpos, this.ypos + this.oy)
       } else {
         // this.setVisible(0)
@@ -172,7 +172,7 @@ new Vue({
       if (this.loading) {
         return
       }
-      window.location.href = 'last.html'
+      window.location.href = 'chris_share.html'
     },
     // 个位数双位显示
     pad2: function(n) {

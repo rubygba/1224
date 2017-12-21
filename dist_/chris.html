@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+
+<head>
+  <meta charset=utf-8>
+  <meta name=apple-touch-fullscreen content=yes>
+  <meta http-equiv=X-UA-Compatible content="IE=edge">
+  <meta http-equiv=X-UA-Compatible content="IE=Edge，chrome=1">
+  <meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+  <meta name=format-detection content="telephone=no, email=no">
+  <meta name=apple-mobile-web-app-capable content=yes>
+  <meta name=apple-mobile-web-app-status-bar-style content=black>
+  <meta name=format-detection content="telephone=no">
+  <meta name=format-detection content="email=no">
+  <meta name=author content="GBA Yao">
+  <meta name=keywords content="">
+  <meta name=description content="">
+  <link rel=dns-prefetch href=// >
+  <link rel="shortcut icon" href=// >
+  <link rel=bookmark href=// type=image/x-icon>
+  <link rel=apple-touch-icon-precomposed href=// >
+
+  <meta name=wap-font-scale content=no>
+  <meta name=screen-orientation content=portrait>
+  <meta name=full-screen content=yes>
+  <meta name=browsermode content=application>
+  <meta name=x5-orientation content=portrait>
+  <meta name=x5-fullscreen content=true>
+  <meta name=x5-page-mode content=app>
+  <title>下载东方头条app，新闻资讯无限看，还能顺便赚钱，微信提现秒到账</title>
+<link href=./static/css/chris.css rel=stylesheet></head>
+
+<body>
+
+
+<div id=app class=index>
+  <div class=alert1 v-if="page === 0">
+    <div class=alertbg>
+      <img src=static/images/alertbg-min.png alt="">
+    </div>
+    <div class=alert1-container>
+      <h2>圣诞礼物大派送</h2>
+      <h3>快来抢礼物！</h3>
+      <div class="btn btn1" @click="page = 1, startGame()">开始抢</div>
+    </div>
+  </div>
+  <div class=main-container>
+    <div class=mc-timer>倒计时：{{count}}s</div>
+
+    <div class=mc-content></div>
+
+    <div class=mc-banner>
+      <div class=mc-banner-top>
+        <img src=static/images/banner1-min.png alt="">
+      </div>
+      <div class=mc-banner-logo>
+        <img src=static/images/banner2-min.png alt="">
+        <div class=prize-counter>礼物数量：</div>
+      </div>
+    </div>
+  </div>
+  <div class=alert2 v-if="page === 2">
+    <div class=alertbg>
+      <img src=static/images/alertbg-min.png alt="">
+    </div>
+    <div class=alert2-container>
+      <h2>恭喜你</h2>
+      <h3>获得20个圣诞老人派发的礼物，</h3>
+      <h3>快去打开吧</h3>
+      <a @click.prevent=openPrz class="btn btn2">立即开启</a>
+    </div>
+  </div>
+  <div class="alert2 alert3" v-if="page === 3">
+    <div class=alertbg>
+      <img src=static/images/alertbg-min.png alt="">
+    </div>
+    <div class=alert2-container>
+      <h2>很抱歉</h2>
+      <h3>你一个礼物都没拿到哦</h3>
+      <div class="btn btn3" @click="page = 1, resetGame()">再试一次</div>
+    </div>
+  </div>
+</div>
+
+
+<script type=text/javascript src=./static/js/manifest.js></script><script type=text/javascript src=./static/js/vendor.js></script><script type=text/javascript src=./static/js/chris.js></script></body>
+
+</html>

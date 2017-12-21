@@ -1,17 +1,8 @@
-$lightBlue = #42beec
-
-// html {
-//   width: 100%;
-//   height: 100%;
-//   overflow: hidden
-// }
-
 body
   width: 100%;
   height: 100%;
   background-color: #9ad2ef
   background-size: 100% auto;
-  counter-reset: prz;
   >a
     display: none
 
@@ -30,11 +21,16 @@ body
 }
 
 .before-1 {
-  height: 200px
+  // height: 200px
+  height: 0
+  padding-top: 53.333333%
   background: url('~assets/before1.jpg') no-repeat top center
   background-size: cover
 }
 .b1-gift {
+  position: absolute
+  top: 0
+  right: 0
   padding-top: 12px
   padding-right: 6px
   img {
@@ -44,68 +40,89 @@ body
 }
 
 .before-2 {
-  height: 200px
+  height: 0
+  padding: 0 14px
+  padding-top: 53.333333%
   background: url('~assets/before2.jpg') no-repeat top center
   background-size: cover
-  padding: 0 14px
-  padding-top: 135px
+  // padding-top: 135px
 }
-.b2-top {
-  border: 1px solid #037aab
-  border-radius: 8px
-  padding: 9px
-  background-color: #fff
-  color: #037aab
-  font-size: 18px
-  margin-bottom: 8px
-}
-.b2-bottom {
-  >div {
-    text-align: center
-    width: 49%
-    color: #037aab
+.b2-content {
+  position relative
+  top: -70px
+  .b2-top {
     border: 1px solid #037aab
     border-radius: 8px
-    padding: 6px 0
+    padding: 9px
     background-color: #fff
-  }
-}
-.b2-rule {
-  position: relative
-}
-.b2-rule-title {
-  font-size: 24px
-  font-weight: bold
-  color: #037aab
-  padding: 13px 0
-}
-.b2-rule-content {
-  border-radius: 9px
-  padding: 10px 10px
-  background-color: #fff
-  border: 1px solid #037aab
-  overflow: scroll
-  margin-bottom: 14px
-  p {
-    color: #44b5e3
-    font-size: 11px
-    margin-bottom: 12px
-  }
-  h5 {
     color: #037aab
+    font-size: 18px
+    margin-bottom: 8px
+  }
+  .b2-bottom {
+    >div {
+      text-align: center
+      width: 49%
+      color: #037aab
+      border: 1px solid #037aab
+      border-radius: 8px
+      padding: 6px 0
+      background-color: #fff
+    }
+  }
+  .b2-rule {
+    position: relative
+  }
+  .b2-rule-title {
+    font-size: 24px
     font-weight: bold
-    margin-bottom: 3px
+    color: #037aab
+    padding: 13px 0
+  }
+  .b2-rule-content {
+    border-radius: 9px
+    padding: 10px 10px
+    background-color: #fff
+    border: 1px solid #037aab
+    overflow: scroll
+    margin-bottom: 40px
+    p {
+      color: #44b5e3
+      font-size: 11px
+      margin-bottom: 12px
+    }
+    h5 {
+      color: #037aab
+      font-weight: bold
+      margin-bottom: 3px
+    }
   }
 }
 
 .before-3 {
-  height: 200px
+  height: 0
+  padding-top: 53.333333%
   background: url('~assets/before3.jpg') no-repeat top center
   background-size: cover
 }
 
 .before-4 {
-  height: 520px
+  height: 0
+  padding-top: 140%
+  // height: 520px
   background: url('~assets/before4.jpg') no-repeat top center
   background-size: cover
+}
+
+.before-btn {
+  display: block
+  position: fixed
+  bottom: 15px
+  overflow hidden
+  text-indent: -999px
+  left: 0
+  right: 0
+  height: 50px
+  background: url('~assets/before_btn.png') no-repeat center
+  background-size: auto 50px
 }

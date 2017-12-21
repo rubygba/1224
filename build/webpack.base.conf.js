@@ -59,7 +59,8 @@ module.exports = {
                 loader: 'url-loader',
                 query: {
                     limit: 10000,
-                    name: utils.assetsPath('images/[name].[ext]')
+                    name: '../images/[name].[ext]'
+                    // name: utils.assetsPath('images/[name].[ext]')
                 }
             },
             {
