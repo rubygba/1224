@@ -1,0 +1,268 @@
+$lightBlue = #42beec
+
+// html {
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden
+// }
+
+body
+  width: 100%;
+  height: 100%;
+  background-color: #f7fbfc
+  overflow: hidden
+  position relative
+  background: url('~assets/bg.jpg') no-repeat center;
+  background-size: 100% auto;
+  counter-reset: prz;
+  >a
+    display: none
+
+button.btn-blue
+  background-color: #42beec
+  color: #fff
+  border: 1px solid #42beec
+  outline: none
+  // &:hover
+  //   background-color: #fff
+  //   color: #42beec
+  &.active
+    background-color: #fff
+    color: #42beec
+
+@keyframes wave {
+  from {
+    transform: translate3d(0, -10px, 0);
+  }
+  to {
+    transform: translate3d(0, 10px, 0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(-360deg)
+  }
+}
+
+.index {
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+  position relative
+}
+
+.alertbg {
+  position: absolute
+  top: 20px
+  left: 0
+  right: 0
+  z-index: -1
+  img {
+    width: 100%
+    animation: rotate 15s linear infinite
+  }
+}
+
+.btn {
+  background: url('~assets/btn1.png') no-repeat center;
+  background-size: contain
+  width: 202px
+  height: 75px
+  overflow: hidden
+  text-indent: -999px
+  display: inline-block
+  margin-top: 5px
+}
+.btn2 {
+  background-image: url('~assets/btn2.png')
+  margin-top: 0
+}
+.btn3 {
+  background-image: url('~assets/btn3.png')
+  margin-top: 15px
+}
+
+.alert1 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7)
+  z-index: 1024
+  padding-top: 50px
+  .alert1-container {
+    padding-top: 195px
+    width: 330px;
+    height: 368px;
+    margin: 0 auto;
+    background: url('~assets/alert1.png') no-repeat top center;
+    background-size: cover;
+    text-align: center
+    color: #fff
+    h2 {
+      font-size: 30px
+      line-height: 1.4
+    }
+    h3 {
+      font-size: 19px
+      line-height: 1.4
+    }
+  }
+}
+
+.main-container {
+  position relative
+  .mc-timer {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 15px;
+  }
+  .mc-banner {
+    text-align: center;
+    .mc-banner-top {
+      position: relative;
+      animation: wave 1.3s linear infinite alternate;
+      img {
+        width: 305px;
+      }
+    }
+    .mc-banner-logo {
+      position: relative;
+      z-index: 999;
+      top: -45px;
+      img {
+        width: 340px;
+        margin-left: -20px;
+      }
+      .prize-counter {
+        position: absolute;
+        bottom: 23px;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-size: 18px;
+        &:after {
+          content: counter(prz)
+        }
+      }
+    }
+  }
+  .mc-content {
+    // max-height: 300px
+    // overflow hidden
+    // &:after {
+    //   content: counter(prz)
+    // }
+  }
+}
+
+.present {
+  display: block;
+  width: 80px;
+  height: 80px;
+  // padding: 10px;
+  background: url('~assets/p1.png') no-repeat center;
+  background-size: 65px;
+  position: absolute;
+  top: 0;
+  &.click {
+    background: none;
+    pointer-events: none;
+    &:after {
+      content: '+1';
+      color: #ffff01;
+      font-size: 30px;
+      font-weight: bold;
+      transform: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      animation: fade .9s ease;
+      opacity: 0;
+    }
+  }
+}
+.click {
+  counter-increment: prz;
+}
+
+.present-1 {
+  background-image: url('~assets/p1.png')
+}
+.present-2 {
+  background-image: url('~assets/p2.png')
+}
+.present-3 {
+  background-image: url('~assets/p3.png')
+}
+.present-4 {
+  background-image: url('~assets/p4.png')
+}
+.present-5 {
+  background-image: url('~assets/p5.png')
+}
+.present-6 {
+  background-image: url('~assets/p6.png')
+}
+.present-7 {
+  background-image: url('~assets/p7.png')
+}
+.present-8 {
+  background-image: url('~assets/p8.png')
+}
+.present-9 {
+  background-image: url('~assets/p9.png')
+}
+
+.alert2 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.7)
+  z-index: 1024
+  padding-top: 92px
+  .alert2-container {
+    padding-top: 125px
+    width: 330px;
+    height: 326px;
+    margin: 0 auto;
+    background: url('~assets/alert2.png') no-repeat top center;
+    background-size: contain;
+    text-align: center
+    color: #fff
+    h2 {
+      font-size: 30px
+      line-height: 1.6
+    }
+    h3 {
+      font-size: 19px
+      line-height: 1.6
+    }
+  }
+}
+
+.alert3 {
+  .alert2-container {
+    background-image: url('~assets/alert3.png')
+  }
+}

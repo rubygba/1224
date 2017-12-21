@@ -1,57 +1,10 @@
-<template>
-<div class="index">
-  <div class="alert1" v-if="page === 0">
-    <div class="alertbg">
-      <img src="~assets/alertbg.png" alt="">
-    </div>
-    <div class="alert1-container">
-      <h2>圣诞礼物大派送</h2>
-      <h3>快来抢礼物！</h3>
-      <div class="btn btn1" @click="page = 1, startGame()">开始抢</div>
-    </div>
-  </div>
-  <div class="main-container">
-    <div class="mc-timer">倒计时：{{count}}s</div>
+import Vue from 'vue'
 
-    <div class="mc-content"></div>
+import fastclick from 'fastclick'
+fastclick.attach(document.body, {})
 
-    <div class="mc-banner">
-      <div class="mc-banner-top">
-        <img src="~assets/banner1.png" alt="">
-      </div>
-      <div class="mc-banner-logo">
-        <img src="~assets/banner2.png" alt="">
-        <div class="prize-counter">礼物数量：</div>
-      </div>
-    </div>
-  </div>
-  <div class="alert2" v-if="page === 2">
-    <div class="alertbg">
-      <img src="~assets/alertbg.png" alt="">
-    </div>
-    <div class="alert2-container">
-      <h2>恭喜你</h2>
-      <h3>获得20个圣诞老人派发的礼物，</h3>
-      <h3>快去打开吧</h3>
-      <a href="last.html" @click.prevent="openPrz" class="btn btn2">立即开启</a>
-    </div>
-  </div>
-  <div class="alert2 alert3" v-if="page === 3">
-    <div class="alertbg">
-      <img src="~assets/alertbg.png" alt="">
-    </div>
-    <div class="alert2-container">
-      <h2>很抱歉</h2>
-      <h3>你一个礼物都没拿到哦</h3>
-      <div class="btn btn3" @click="page = 1, resetGame()">再试一次</div>
-    </div>
-  </div>
-</div>
-</template>
-
-<script>
-import * as API from 'common/js/api'
-import BackTop from 'common/vue/BackTop'
+import 'common/styles/gb-strap.css'
+import './styles/chris.styl'
 
 class Present {
   constructor(number, ox, oy) {
@@ -116,11 +69,11 @@ class Present {
   }
 }
 
-export default {
-  components: {
-    BackTop
-  },
-  data: function() {
+new Vue({
+  el: '#app',
+  // template: '<App/>',
+  // components: { App }
+  data() {
     return {
       page: 0,
       list: [],
@@ -133,9 +86,9 @@ export default {
   },
   computed: {
   },
-  created: function() {
+  created() {
   },
-  mounted: function() {
+  mounted() {
   },
   methods: {
     startGame() {
@@ -234,11 +187,4 @@ export default {
       document.body.scrollTop = document.documentElement.scrollTop = 0
     }
   }
-}
-</script>
-
-<style lang="stylus">
-@import '~@/common/styles/gb-strap.css'
-@import '../styles/index.styl'
-</style>
-
+})

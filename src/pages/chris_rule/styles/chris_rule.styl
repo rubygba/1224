@@ -1,0 +1,111 @@
+$lightBlue = #42beec
+
+// html {
+//   width: 100%;
+//   height: 100%;
+//   overflow: hidden
+// }
+
+body
+  width: 100%;
+  height: 100%;
+  background-color: #9ad2ef
+  background-size: 100% auto;
+  counter-reset: prz;
+  >a
+    display: none
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0) rotate(0)
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-3px, 0, 0) rotate(-7deg)
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(3px, 0, 0) rotate(7deg)
+  }
+}
+
+.before-1 {
+  height: 200px
+  background: url('~assets/before1.jpg') no-repeat top center
+  background-size: cover
+}
+.b1-gift {
+  padding-top: 12px
+  padding-right: 6px
+  img {
+    animation: shake 1.5s linear infinite
+    width: 68px
+  }
+}
+
+.before-2 {
+  height: 200px
+  background: url('~assets/before2.jpg') no-repeat top center
+  background-size: cover
+  padding: 0 14px
+  padding-top: 135px
+}
+.b2-top {
+  border: 1px solid #037aab
+  border-radius: 8px
+  padding: 9px
+  background-color: #fff
+  color: #037aab
+  font-size: 18px
+  margin-bottom: 8px
+}
+.b2-bottom {
+  >div {
+    text-align: center
+    width: 49%
+    color: #037aab
+    border: 1px solid #037aab
+    border-radius: 8px
+    padding: 6px 0
+    background-color: #fff
+  }
+}
+.b2-rule {
+  position: relative
+}
+.b2-rule-title {
+  font-size: 24px
+  font-weight: bold
+  color: #037aab
+  padding: 13px 0
+}
+.b2-rule-content {
+  border-radius: 9px
+  padding: 10px 10px
+  background-color: #fff
+  border: 1px solid #037aab
+  overflow: scroll
+  margin-bottom: 14px
+  p {
+    color: #44b5e3
+    font-size: 11px
+    margin-bottom: 12px
+  }
+  h5 {
+    color: #037aab
+    font-weight: bold
+    margin-bottom: 3px
+  }
+}
+
+.before-3 {
+  height: 200px
+  background: url('~assets/before3.jpg') no-repeat top center
+  background-size: cover
+}
+
+.before-4 {
+  height: 520px
+  background: url('~assets/before4.jpg') no-repeat top center
+  background-size: cover
+}
